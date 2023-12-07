@@ -27,7 +27,7 @@ ifdef SOURCE_DATE_EPOCH
 else
     DATE := $(shell date -u --iso-8601=minutes)
 endif
-REVISION ?= 0000000000000000000000000000000000000000
+REVISION ?= $(shell git rev-parse HEAD)
 COMPILER := $(realpath $(shell which $(CC)))
 PLATFORM ?= $(shell uname -m)
 
