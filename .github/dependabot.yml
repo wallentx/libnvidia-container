@@ -4,6 +4,7 @@
 version: 2
 updates:
   - package-ecosystem: "gomod"
+    open-pull-requests-limit: 0
     target-branch: main
     directory: "src/nvcgo/"
     schedule:
@@ -13,6 +14,7 @@ updates:
     - dependencies
 
   - package-ecosystem: "docker"
+    open-pull-requests-limit: 0
     target-branch: main
     directories:
     # Golang version
@@ -24,6 +26,7 @@ updates:
 
 # The release branch(es):
   - package-ecosystem: "gomod"
+    open-pull-requests-limit: 0
     target-branch: release-1.18
     directories:
     - "/"
@@ -44,6 +47,7 @@ updates:
       - version-update:semver-minor
 
   - package-ecosystem: "docker"
+    open-pull-requests-limit: 0
     target-branch: release-1.18
     directories:
     # Golang version
@@ -62,11 +66,13 @@ updates:
     - maintenance
 
   - package-ecosystem: "github-actions"
+    open-pull-requests-limit: 0
     directory: "/"
     schedule:
       interval: "daily"
 
   - package-ecosystem: "github-actions"
+    open-pull-requests-limit: 0
     target-branch: gh-pages
     directory: "/"
     schedule:
